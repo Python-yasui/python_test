@@ -11,7 +11,7 @@
 `docker container exec -it {CONTAINER_ID} django-admin startproject {PROJECT_NAME}`
 PROJECT_NAMEには半角英数字でプロジェクト名を設定
 
-作成されたプロジェクトディレクトリ内 
+作成されたプロジェクトディレクトリ内
 `{PROJECT_NAME}/{PROJECT_NAME}/settings.py`の各設定を変更
 
 ### DATABASES
@@ -47,6 +47,11 @@ ALLOWED_HOSTS = ['*']
 PORTは`docker-compose.yml`で設定してあるもの（今回は8000）でアクセス
 `http://192.168.33.15:8000`
 
+### コンテナ停止
+`docker stop {CONTAINER_ID | CONTAINER_NAME}`
+
+### コンテナ起動
+`docker start {CONTAINER_ID | CONTAINER_NAME}`
 
 ### 参照サイト
 https://hodalog.com/run-django-app-using-docker-compose/
